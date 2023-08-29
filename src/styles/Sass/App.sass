@@ -18,77 +18,258 @@ body
         color: $fontColor
         font-weight: 600
         font-size: 1em
-#root
-    @include columnFlex
-    justify-content: center
-    align-items: center
 
-.card
-    @include columnFlex
-    justify-content: center
-    align-items: center
-
+button
+    @include button
+    padding: 3px 8px
+    font-size: .75em
 ::placeholder
     color: $secondarycolor
     font-weight: 600
-.logo
-    height: 6em
-    padding: 1.5em
-    will-change: filter
-    transition: filter 300ms
 
-    &:hover
-        filter: drop-shadow(0 0 2em #646cffaa)
+.bookstoreTitle
+    color: $secondarycolor
+    font-weight: 700
+    @include columnFlex
+    justify-content: center
+    align-items: center
 
-    &.react:hover
-        filter: drop-shadow(0 0 2em #61dafbaa)
+.fullWebsite
+    @include columnFlex
+    justify-content: space-evenly
+    align-items: stretch
+    gap: 2rem
 
-.read-the-docs
-    color: $primarycolor !important
+.App,.BooksContainer
+    @include columnFlex
+    justify-content: center
+    align-items: stretch
+    gap: .5rem
+footer
+    position: fixed
+    align-self: center
+    width: 97%
+    top: auto
+    bottom: 0.3rem
+    padding: .2rem
+    border: 2px solid $secondarycolor
+    box-shadow: $box-shadow
+    background: $primarycolor
+    a
+        @include link
+        color: blue
 
-@keyframes logo-spin
-    from
-        transform: rotate(0deg)
+.Book
+    @include rowFlex
+    justify-content: space-between !important
+    align-items: center
+    align-self: stretch !important
+    margin: .5rem .7rem
+    padding: .7rem
+    background: $primarycolor
+    border-radius: 3px
+    box-shadow: $box-shadow
+    color: $fontColor
+    gap: 2rem
+    .fstDiv
+        flex: .5
+    .scdDiv
+        flex: .5
+        @include rowFlex
+        justify-content: space-between !important
+        align-items: center
+        gap: 1rem
+    span, a
+        font-size: .75em
+        font-weight: 600
+        opacity: .4
+    a
+        opacity: .6
+.BookChapter
+    gap: .25rem
+    button
+        margin-top: .3rem
+        padding: 3px 10px
 
-    to
-        transform: rotate(360deg)
+.AddBook
+    @include columnFlex
+    justify-content: center
+    gap: .3rem
+    align-self: stretch !important
+    padding: .5rem
+    margin: .2rem
+    background: $primarycolor
+    border-radius: 3px
+    box-shadow: $box-shadow
+    input, button
+        color: $fontColor
+        font-size: .8em
+        padding: 2px
+    h3
+        color: $fontColor
+        font-size: 1.3em
+        font-weight: 800
+    .bookInput
+        @include rowFlex
+        justify-content: space-evenly !important
+        align-items: center
+        gap: 1rem
+        input
+            flex: .4
+        button
+            flex: .2
 
-// @media (prefers-reduced-motion: no-preference)
-// a:nth-of-type(2) .logo
-//     animation: logo-spin infinite 20s linear
+.BookDetails,.BookChapter, .Books
+    @include columnFlex
+    justify-content: center
+    align-items: stretch
+    gap: .5rem
 
-// .card
-//     padding: 2em
+.BookDetails
+    gap: .2rem
+    h2
+        font-size: 1.3em
+        font-weight: 700
+    div
+        @include rowFlex
+        justify-content: stretch !important
+        align-items: center
+        gap: .5rem
 
-// .read-the-docs
-//     color: #888
+.BookStatus
+    @include rowFlex
+    justify-content: space-between !important
+    align-items: center
+    gap: .4rem
 
-// @media ( min-width: 768px  )
-//     body
+.headSpan
+    border: .01rem solid $fontColor
+    height: 1rem
+    box-shadow: $spanShadow
+    border-radius: .2rem
+    opacity: .2
+.hSpan
+    border: .01rem solid $fontColor
+    width: 98%
+    opacity: .3
+    border-radius: 6px
+    box-shadow: $spanShadow
+    align-self: center
 
-//         font-size: 18px
-//     .accountPic
-//         max-width: 25px
+.headfour
+    font-size: .85em !important
+    h3
+        font-weight: 800
+        font-size: 1em
+    h4
+        font-size: .85em
+        opacity: .4
 
-//     .navBar
-//         padding: .2rem 1.5rem
-//     .headSpan
-//         height: 2.5rem
-//     footer
-//         width: 98%
-// @media (min-width: 999px)
-//     body
-//         font-size: 25px
-//     .accountPic
-//         max-width: 30px
+nav
+    @include columnFlex
+    padding: .2rem
+    gap: .2rem
+    justify-content: center
+    align-self: stretch
+    box-shadow: $box-shadow
+    background: $primarycolor
 
-//     .headSpan
-//         height: 2.8rem
+.navBar
+    @include rowFlex
+    justify-content: space-between
+    align-items: center
+    border: .2px solid $secondarycolor
+    padding: .25rem
+    align-self: stretch
 
-// @media (min-width:1200px)
-//     body
-//         font-size: 30px
-//     .headSpan
-//         height: 3.3rem
-//     footer
-//         width: 98.5%
+    h2
+        font-weight: 700 !important
+        font-size: 1em
+
+    div
+        @include rowFlex
+        align-items: center !important
+        justify-content: center
+        gap: 1rem
+
+        span
+            align-self: center !important
+
+.accountPic
+    max-width: 17px
+
+.HomeComponent
+    text-align: left
+    white-space: normal !important
+    margin: 2rem 3rem
+
+    h2
+        font-size: 1.2em
+        font-weight: 600
+
+    p
+        font-size: 1em
+        margin-left: .5rem
+
+    ol li
+        font-size: 1em
+        margin-left: 3rem
+// .Routes
+//     @include columnFlex
+//     justify-content: center
+//     align-items: stretch
+
+.CategoriesComponent
+    @include columnFlex
+    justify-content: center
+    align-items: stretch
+
+.notFound
+    border-radius: 4px
+    margin: 5rem auto
+    padding: 4rem
+    font-size: 2em
+    font-weight: 800
+    color: white
+    background: $secondarycolor
+
+.ContactComponent
+    @include columnFlex
+    justify-content: center
+    align-items: center
+    margin: 2rem
+
+.link
+    @include link
+    background: none !important
+    color: $fontColor
+
+@media ( min-width: 768px  )
+    body
+
+        font-size: 18px
+    .accountPic
+        max-width: 25px
+
+    .navBar
+        padding: .2rem 1.5rem
+    .headSpan
+        height: 2.5rem
+    footer
+        width: 98%
+@media (min-width: 999px)
+    body
+        font-size: 25px
+    .accountPic
+        max-width: 30px
+
+    .headSpan
+        height: 2.8rem
+
+@media (min-width:1200px)
+    body
+        font-size: 30px
+    .headSpan
+        height: 3.3rem
+    footer
+        width: 98.5%
