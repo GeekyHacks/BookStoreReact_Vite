@@ -1,4 +1,3 @@
-import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import MainContainer from './components/Books';
 import Contact from './components/Contact';
