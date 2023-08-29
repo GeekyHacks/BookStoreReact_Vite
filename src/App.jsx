@@ -37,7 +37,7 @@ function App() {
         <Route path="/BookStore_React/contact" element={<Contact />} />
         <Route path="/BookStore_React/categories" element={<Categories />} />
         {/* <Route path="/BookStore_React/*" element={<div className="notFound"> Page not found!! </div>} /> */}
-        <Route path="/BookStore_React/categories" element={<Counter />} />
+        <Route path="/BookStore_React/*" element={<Counter />} />
       </Routes>
       <Footer />
     </div>
