@@ -54,7 +54,7 @@ In this Repo I will create a simplified version of bookstore that allows me to: 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://geekyhacks.github.io/RepoTitle/)
+- Will be deploy soon.
 
 # 📖 RepoTitle <a name="live-demo"></a>
 
