@@ -163,10 +163,8 @@ people.
 I would like to thank...
 
 - Microverse Review Team
-- My Coding Partner @firstpj
 - Microverse Community in Slack
 - my Mentor @Strangeal
-- [Pokemon API](https://pokeapi.co/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
