@@ -2,26 +2,55 @@ import { createSlice } from '@reduxjs/toolkit';
 import BookItems from './BookItems';
 import BookItem from './BookItem';
 
+// const initialState = {
+//   bookItems: BookItems,
+//   isLoading: true,
+// };
+
+// const bookSlice = createSlice({
+//   name: 'books',
+//   initialState,
+//   reducers: {
+//     AddItem: (state) => {
+//       state.bookItems = BookItems.push(BookItem);
+//       console.log('Item Added');
+//     },
+//     RemoveItem: (state) => {
+//       state.bookItems = BookItems.pop(BookItem);
+//       console.log('Item removed');
+//     },
+//   },
+// });
+
+// console.log(bookSlice);
+
+// export default bookSlice.reducer;
+
 const initialState = {
   bookItems: BookItems,
-  isLoading: true,
 };
 
+// createSlice simplify the initial data editing and updating using reducers and actions 
 const bookSlice = createSlice({
   name: 'books',
   initialState,
   reducers: {
-    AddItem: (state) => {
-      state.bookItems = BookItems.push(BookItem);
-      console.log('Item Added');
+//the addBook&removeBook functions will be used as an action creator.
+// When this action is dispatched, it will contain a payload property that I can use to pass data to the reducer.
+    addBook: (state, action) => {
+      state.bookItems.push(action.payload);
     },
-    RemoveItem: (state) => {
-      state.bookItems = BookItems.pop(BookItem);
-      console.log('Item removed');
+    removeBook: (state, action) => {
+      state.bookItems = state.bookItems.filter((book) => book.id !== action.payload);
     },
   },
 });
 
 console.log(bookSlice);
 
+// after creating reducers and actions you need to export them to use them in any component
+export const { addBook, removeBook } = bookSlice.actions;
 export default bookSlice.reducer;
+
+
+// the payload is actually the data that's dispatched from a bookform to be used 

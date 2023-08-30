@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from './counterSlice';
+import counterReducer from './counter/counterSlice';
 import booksReducer from './books/bookSlice';
 import catReducer from './categories/catSlice';
 

@@ -25,3 +25,4 @@ dist-ssr
 
 # files
 /src/components/books/
+/src/redux/counter/
