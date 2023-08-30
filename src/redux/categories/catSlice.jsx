@@ -1,21 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit';
-import CatItems from './CatItems';
+
 const initialState = {
-  catItems: CatItems,
-  isLoading: true,
+  status: 'under-development',
 };
 
 const catSlice = createSlice({
   name: 'categories',
   initialState,
   reducers: {
-    CheckStatus: (state) => {
-      state.catItems;
-      console.log('check status');
+    setUnderDevelopment: (state) => {
+      state.status = 'under-development';
     },
   },
 });
 
 console.log(catSlice);
 
+export const { setUnderDevelopment } = catSlice.actions;
 export default catSlice.reducer;

@@ -1,3 +1,3 @@
-const BookItems =[]  
-  export default BookItems;
-  
+const BookItems = [];
+
+export default BookItems;

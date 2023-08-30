@@ -1,7 +1,6 @@
-import BookItem from './BookItem';
-import { useSelector, useDispatch } from 'react-redux';
-import { addBook, removeBook } from './bookSlice';
-import Categories from '../../components/Categories';
+// import BookItem from './BookItem';
+import { useSelector } from 'react-redux';
+// import { addBook, removeBook } from './bookSlice';
 
 const BooksContainer = () => {
   // useSelector allow us to pick the desired item from a store state value.
@@ -10,12 +9,11 @@ const BooksContainer = () => {
   // dispatch allow us to update the state after using reducers and useselectors
   // const dispatch = useDispatch();
 
-  const result = (
-    <div className="BooksContainer">
-      <Categories />
+  return (
+    <div className="CategoriesComponent">
+      <h2 className="notFound"> Books:{books} </h2>
     </div>
   );
-  return result;
 };
 
 export default BooksContainer;
