@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-
+import BookItems from './BookItems';
 const initialState = {
-  bookItems: 'BookItems',
+  bookItems: BookItems,
 };
 
 // createSlice simplify the initial data editing and updating using reducers and actions

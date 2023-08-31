@@ -1,20 +1,41 @@
+// import { createSlice } from '@reduxjs/toolkit';
+// import CatItems from './CatItems';
+// const initialState = {
+//   categories: CatItems,
+// };
+
+// const catSlice = createSlice({
+//   name: 'categories',
+//   initialState,
+//   reducers: {
+//     checkStatus: (state, action) => {
+//       state.categories = action.payload === 'Under construction' ? 'Under construction' : CatItems;
+//     },
+//   },
+// });
+
+// console.log(catSlice);
+
+// export const { checkStatus } = catSlice.actions;
+// // this goes to the store to make use it anywhere in the app
+// export default catSlice.reducer;
 import { createSlice } from '@reduxjs/toolkit';
+import CatItems from './CatItems';
 
 const initialState = {
-  status: 'under-development',
+  categories: CatItems,
 };
 
 const catSlice = createSlice({
   name: 'categories',
   initialState,
   reducers: {
-    setUnderDevelopment: (state) => {
-      state.status = 'under-development';
+    checkStatus: (state, action) => {
+      // Update categories only if payload is 'Under construction'
+      state.categories = action.payload === 'Under construction' ? 'Under construction' : CatItems;
     },
   },
 });
 
-console.log(catSlice);
-
-export const { setUnderDevelopment } = catSlice.actions;
+export const { checkStatus } = catSlice.actions;
 export default catSlice.reducer;
