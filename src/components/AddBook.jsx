@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useState } from 'react-redux';
 import { addBook } from '../redux/books/bookSlice';
 const AddBook = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
   const [author, setAuthor] = useState('');
-  //dispatches the addBook action with a new book object.
-  //The component then renders the list of books along with a button to add new books.
   const handleAddBook = () => {
     if (title && category) {
       const newBook = {
