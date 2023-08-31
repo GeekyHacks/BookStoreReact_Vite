@@ -3,7 +3,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './styles/Css/App.css';
 import accountPic from './assets/account-circle.svg';
-import BooksContainer from './components/BooksContainer';
+import BooksSection from './components/BooksSection';
 import CatContainer from './components/CatContainer';
 
 function App() {
@@ -29,8 +29,8 @@ function App() {
         </div>
       </nav>
       <Routes className="Routes">
-        <Route path="/BookStoreReact_Vite/" element={<BooksContainer />} />
-        <Route path="/BookStoreReact_Vite/books" element={<BooksContainer />} />
+        <Route path="/BookStoreReact_Vite/" element={<BooksSection />} />
+        <Route path="/BookStoreReact_Vite/books" element={<BooksSection />} />
         <Route path="/BookStoreReact_Vite/contact" element={<Contact />} />
         <Route path="/BookStoreReact_Vite/*" element={<div className="notFound"> Page not found!! </div>} />
         <Route path="/BookStoreReact_Vite/categories" element={<CatContainer />} />
