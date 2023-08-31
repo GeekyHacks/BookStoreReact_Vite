@@ -10,7 +10,8 @@ const bookSlice = createSlice({
   initialState,
   reducers: {
     //the addBook&removeBook functions will be used as an action creator.
-    // When this action is dispatched, it will contain a payload property that I can use to pass data to the reducer.
+    // When this action is dispatched, it will contain a payload property
+    //that I can use to pass data to the reducer.
     addBook: (state, action) => {
       state.bookItems.push(action.payload);
     },
