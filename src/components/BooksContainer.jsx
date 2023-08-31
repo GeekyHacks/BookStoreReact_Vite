@@ -1,5 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/bookSlice';
+import BookProgress from './Books/BookProgress';
+import Buttons from './Books/Buttons';
 
 const BooksContainer = () => {
   const books = useSelector((state) => state.books.bookItems);
@@ -21,23 +23,11 @@ const BooksContainer = () => {
                   <span>{book.category}</span>
                   <h2>{book.title}</h2>
                   <span>{book.author}</span>
-                  <div>
-                    <button href="https://github.com/GeekyHacks" type="a">
-                      Comments
-                    </button>
-                    <span>|</span>
-                    <button onClick={() => handleRemoveBook(book.item_id)} type="button">
-                      Remove
-                    </button>
-                    <span>|</span>
-                    <button type="a" href="https://github.com/GeekyHacks">
-                      Edit
-                    </button>
-                  </div>
+                  <Buttons handleBook={handleRemoveBook} book={book} />
                 </div>
               </div>
 
-              <div className="scdDiv">
+              {/* <div className="scdDiv">
                 <div className="BookStatus">
                   <div className="progressBar">
                     <div>64%</div>
@@ -57,7 +47,8 @@ const BooksContainer = () => {
                   </div>
                   <button type="button">UPDATE PROGRESS</button>
                 </div>
-              </div>
+              </div> */}
+              <BookProgress />
             </li>
           ))}
         </ul>
