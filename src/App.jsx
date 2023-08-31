@@ -1,42 +1,39 @@
 import { Routes, Route, Link } from 'react-router-dom';
-import MainContainer from './components/Books';
 import Contact from './components/Contact';
-import Categories from './components/Categories';
 import Footer from './components/Footer';
 import './styles/Css/App.css';
 import accountPic from './assets/account-circle.svg';
-import Counter from './counter/Counter';
+import BooksContainer from './components/BooksContainer';
+import CatContainer from './components/CatContainer';
 
 function App() {
   return (
     <div className="App">
       <nav className="navBar">
-        <Link className="bookstoreTitle" to="/BookStore_React/">
+        <Link className="bookstoreTitle" to="/BookStoreReact_Vite/">
           Geeky Book Store
         </Link>
         <div className="navLinks">
-          <Link className="link" to="/BookStore_React/books">
+          <Link className="link" to="/BookStoreReact_Vite/books">
             Books
           </Link>
-          <Link className="link" to="/BookStore_React/categories">
+          <Link className="link" to="/BookStoreReact_Vite/categories">
             Categories
           </Link>
-          <Link className="link" to="/BookStore_React/contact">
+          <Link className="link" to="/BookStoreReact_Vite/contact">
             Contact
           </Link>
-          <Link className="bookstoreTitle" to="/BookStore_React/">
+          <Link className="bookstoreTitle" to="/BookStoreReact_Vite/">
             <img className="accountPic" src={accountPic} alt="" />
           </Link>
         </div>
       </nav>
       <Routes className="Routes">
-        {/* <Route index element={<Home />} /> */}
-        <Route path="/BookStore_React/" element={<MainContainer />} />
-        <Route path="/BookStore_React/books" element={<MainContainer />} />
-        <Route path="/BookStore_React/contact" element={<Contact />} />
-        <Route path="/BookStore_React/categories" element={<Categories />} />
-        {/* <Route path="/BookStore_React/*" element={<div className="notFound"> Page not found!! </div>} /> */}
-        <Route path="/BookStore_React/*" element={<Counter />} />
+        <Route path="/BookStoreReact_Vite/" element={<BooksContainer />} />
+        <Route path="/BookStoreReact_Vite/books" element={<BooksContainer />} />
+        <Route path="/BookStoreReact_Vite/contact" element={<Contact />} />
+        <Route path="/BookStoreReact_Vite/*" element={<div className="notFound"> Page not found!! </div>} />
+        <Route path="/BookStoreReact_Vite/categories" element={<CatContainer />} />
       </Routes>
       <Footer />
     </div>

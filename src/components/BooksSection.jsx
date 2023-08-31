@@ -1,7 +1,7 @@
 import BooksContainer from './Books/BooksContainer';
-import AddBook from './Books/AddBook';
+import AddBook from './AddBook';
 
-const Books = () => {
+const BooksSection = () => {
   const result = (
     <div className="Books">
       <BooksContainer />
@@ -12,4 +12,4 @@ const Books = () => {
   return result;
 };
 
-export default Books;
+export default BooksSection;

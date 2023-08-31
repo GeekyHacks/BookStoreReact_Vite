@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# files
+/src/components/books/
+/src/redux/counter/
