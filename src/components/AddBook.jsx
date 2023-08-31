@@ -5,7 +5,7 @@ const AddBook = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
-
+  const [author, setAuthor] = useState('');
   //dispatches the addBook action with a new book object.
   //The component then renders the list of books along with a button to add new books.
   const handleAddBook = () => {
@@ -13,7 +13,7 @@ const AddBook = () => {
       const newBook = {
         item_id: `item${Date.now()}`,
         title,
-        author: 'Author Name',
+        author,
         category,
       };
       dispatch(addBook(newBook));
@@ -27,6 +27,14 @@ const AddBook = () => {
       <h3>Add new Book</h3>
       <div className="bookInput">
         <input type="text" required placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+        <input
+          type="text"
+          required
+          placeholder="Author Name"
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
+        />
+
         <input
           type="text"
           required

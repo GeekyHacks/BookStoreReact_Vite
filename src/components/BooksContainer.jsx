@@ -12,13 +12,13 @@
 //   const dispatch = useDispatch();
 
 //   const handleAddBook = () => {
-//     const newBook = {
+//     const removed = {
 //       item_id: `item${books.length + 1}`,
 //       title: `New Book ${books.length + 1}`,
 //       author: 'Author Name',
 //       category: 'Category',
 //     };
-//     dispatch(addBook(newBook));
+//     dispatch(addBook(removed));
 //   };
 
 //   return (
@@ -42,7 +42,7 @@
 
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/bookSlice';
+import { removeBook } from '../redux/books/bookSlice';
 
 const BooksContainer = () => {
   // useSelector allow us to pick the desired item from a store state value.
@@ -53,14 +53,8 @@ const BooksContainer = () => {
 
   const dispatch = useDispatch();
 
-  const handleAddBook = () => {
-    const newBook = {
-      item_id: `item${books.length + 1}`,
-      title: `New Book ${books.length + 1}`,
-      author: 'Author Name',
-      category: 'Category',
-    };
-    dispatch(addBook(newBook));
+  const handleRemoveBook = (itemId) => {
+    dispatch(removeBook(itemId));
   };
 
   return (
@@ -75,17 +69,17 @@ const BooksContainer = () => {
                   <h2>{book.title}</h2>
                   <span>{book.author}</span>
                   <div>
-                    <a href="https://github.com/GeekyHacks" type="a">
+                    <button href="https://github.com/GeekyHacks" type="a">
                       Comments
-                    </a>
+                    </button>
                     <span>|</span>
-                    <a href="https://github.com/GeekyHacks" type="a">
+                    <button onClick={handleRemoveBook()} type="button">
                       Remove
-                    </a>
+                    </button>
                     <span>|</span>
-                    <a type="a" href="https://github.com/GeekyHacks">
+                    <button type="a" href="https://github.com/GeekyHacks">
                       Edit
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -122,5 +116,3 @@ const BooksContainer = () => {
 };
 
 export default BooksContainer;
-
-<div className="Book"></div>;
