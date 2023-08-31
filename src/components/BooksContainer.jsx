@@ -53,8 +53,8 @@ const BooksContainer = () => {
 
   const dispatch = useDispatch();
 
-  const handleRemoveBook = (itemId) => {
-    dispatch(removeBook(itemId));
+  const handleRemoveBook = (item_id) => {
+    dispatch(removeBook(item_id));
   };
 
   return (
@@ -73,7 +73,7 @@ const BooksContainer = () => {
                       Comments
                     </button>
                     <span>|</span>
-                    <button onClick={handleRemoveBook()} type="button">
+                    <button onClick={() => handleRemoveBook(book.item_id)} type="button">
                       Remove
                     </button>
                     <span>|</span>
