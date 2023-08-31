@@ -15,6 +15,7 @@ body {
   justify-content: center;
   align-items: stretch;
   white-space: nowrap;
+  overflow-y: scroll;
 }
 
 body h2,
@@ -78,7 +79,7 @@ button:focus {
 }
 
 footer {
-  position: fixed;
+  position: relative;
   align-self: center;
   width: 97%;
   top: auto;
@@ -87,6 +88,7 @@ footer {
   border: 2px solid #1ba8c5;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
   background: #caf0f8;
+  margin-top: 2rem;
 }
 
 footer a {

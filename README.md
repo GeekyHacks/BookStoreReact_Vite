@@ -6,7 +6,6 @@
 
 </div>
 
-
 # RepoTitle
 
 <a name="readme-top"></a>
@@ -54,7 +53,7 @@ In this Repo I will create a simplified version of bookstore that allows me to: 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Will be deploy soon.
+- [live Demo](https://geekyhacks.github.io/BookStoreReact_Vite/)
 
 # 📖 RepoTitle <a name="live-demo"></a>
 

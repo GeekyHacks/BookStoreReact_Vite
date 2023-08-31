@@ -23,6 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 
-# files
-/src/components/books/
-/src/redux/counter/

@@ -13,6 +13,7 @@ body
     justify-content: center
     align-items: stretch
     white-space: nowrap
+    overflow-y: scroll
 
     h2, span, h3
         color: $fontColor
@@ -46,7 +47,7 @@ button
     align-items: stretch
     gap: .5rem
 footer
-    position: fixed
+    position: relative
     align-self: center
     width: 97%
     top: auto
@@ -55,6 +56,7 @@ footer
     border: 2px solid $secondarycolor
     box-shadow: $box-shadow
     background: $primarycolor
+    margin-top: 2rem
     a
         @include link
         color: blue

@@ -1,4 +1,4 @@
-import BooksContainer from './Books/BooksContainer';
+import BooksContainer from './BooksContainer';
 import AddBook from './AddBook';
 
 const BooksSection = () => {
