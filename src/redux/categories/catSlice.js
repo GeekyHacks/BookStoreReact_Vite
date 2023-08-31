@@ -11,7 +11,7 @@ const catSlice = createSlice({
   reducers: {
     checkStatus: (state, action) => {
       // Update categories only if payload is 'Under construction'
-      state.categories = action.payload === 'Under construction' ? 'Under construction' : CatItems;
+      state.categories = action.payload === 'Under construction' ? 'Under construction' : state.categories;
     },
   },
 });

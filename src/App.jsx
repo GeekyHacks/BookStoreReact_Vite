@@ -3,8 +3,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './styles/Css/App.css';
 import accountPic from './assets/account-circle.svg';
-import BooksContainer from './redux/books/BooksContainer';
-import CatContainer from './redux/categories/CatContainer';
+import BooksContainer from './components/BooksContainer';
+import CatContainer from './components/CatContainer';
 
 function App() {
   return (
