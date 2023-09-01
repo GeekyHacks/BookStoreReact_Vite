@@ -28,13 +28,13 @@ const AddBook = () => {
       <h3>Add new Book</h3>
       <div className="bookInput">
         <input type="text" required placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-        <input
+        {/* <input
           type="text"
           required
           placeholder="Author Name"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
-        />
+        /> */}
 
         <input
           type="text"

@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <nav className="navBar">
-        <div className="fstDiv">
+        <div className="fstdiv">
           <Link className="bookstoreTitle" to="/BookStoreReact_Vite/">
             Book Store
           </Link>

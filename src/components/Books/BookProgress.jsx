@@ -1,15 +1,22 @@
+import React from 'react';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 const BookProgress = () => {
+  const percentage = 64;
+
   return (
     <div className="scdDiv">
       <div className="BookStatus">
-        <div className="progressBar">
-          <div>64%</div>
+        <div className='progressBar'>
+          <CircularProgressbar value={percentage} text={''} />
         </div>
+
         <span className="headSpan" />
         <div>
           <h3>
-            64% <br />
+            {percentage}%
+           <br />
             <span>Completed</span>
           </h3>
         </div>

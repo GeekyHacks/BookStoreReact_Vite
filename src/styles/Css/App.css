@@ -15,7 +15,7 @@ body {
   white-space: nowrap;
   overflow-y: scroll;
 }
-body h2, body span, body h3 {
+body h2, body span, body h3, body footer {
   color: #121212;
   font-weight: 600;
   font-size: 1em;
@@ -72,14 +72,10 @@ button:focus {
 
 footer {
   position: relative;
-  align-self: center;
-  width: 97%;
+  align-self: stretch;
   top: auto;
-  bottom: 0.3rem;
   padding: 0.2rem;
-  border: 2px solid #ffffff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-  background: #CAF0F8;
+  background: white;
   margin-top: 2rem;
 }
 footer a {
@@ -100,7 +96,7 @@ footer a {
   padding: 0.5rem;
   background: #ffffff;
   border-radius: 3px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1);
   color: #121212;
 }
 .Book .fstDiv {
@@ -112,7 +108,7 @@ footer a {
   flex-direction: row;
   justify-content: space-between !important;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 .Book span, .Book a {
   font-size: 0.75em;
@@ -141,17 +137,16 @@ footer a {
   align-self: stretch !important;
   padding: 0.5rem;
   margin: 0.2rem;
-  background: #CAF0F8;
+  background: white;
   border-radius: 3px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 .AddBook input, .AddBook button {
-  color: #121212;
   font-size: 0.8em;
   padding: 2px;
 }
 .AddBook h3 {
-  color: #121212;
+  color: #888888;
   font-size: 1.3em;
   font-weight: 800;
 }
@@ -160,13 +155,15 @@ footer a {
   flex-direction: row;
   justify-content: space-evenly !important;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 .AddBook .bookInput input {
   flex: 0.4;
 }
 .AddBook .bookInput button {
   flex: 0.2;
+  background: #0290ff;
+  color: white !important;
 }
 
 .BookDetails, .BookChapter, .Books {
@@ -175,6 +172,17 @@ footer a {
   justify-content: center;
   align-items: stretch;
   gap: 0.5rem;
+}
+
+.progressBar {
+  width: 4em;
+  height: 4em;
+  align-self: center;
+  border-image-source: linear-gradient(to bottom, #0124ea, #379cf6) !important;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #0290ff !important;
 }
 
 .BookDetails {
@@ -199,11 +207,14 @@ footer a {
   align-items: center;
   gap: 0.4rem;
 }
+.BookStatus div h3 {
+  font-size: 0.9em;
+}
 
 .headSpan {
   border: 0.01rem solid #121212;
   height: 1rem;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8), 1px 2px 4px rgba(0, 0, 0, 0.8);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.6), 1px 2px 4px rgba(0, 0, 0, 0.6);
   border-radius: 0.2rem;
   opacity: 0.2;
 }
@@ -213,7 +224,6 @@ footer a {
   width: 98%;
   opacity: 0.3;
   border-radius: 6px;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8), 1px 2px 4px rgba(0, 0, 0, 0.8);
   align-self: center;
 }
 
@@ -236,11 +246,11 @@ footer a {
   align-items: center;
   align-self: stretch;
   padding: 0.5rem 0.5rem 0.05rem 1.5rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1);
   background: #ffffff;
 }
 
-.fstDiv {
+.fstdiv {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -265,7 +275,7 @@ footer a {
 }
 
 .accountPic img {
-  max-width: 18px;
+  max-width: 20px;
   align-self: flex-end;
 }
 
@@ -310,15 +320,6 @@ footer a {
   justify-content: center;
   align-items: center;
   margin: 2rem;
-}
-
-.link {
-  transition: all 0.5s;
-  opacity: 0.6;
-  cursor: pointer;
-  border: none;
-  background: none !important;
-  color: #121212;
 }
 
 @media (min-width: 768px) {

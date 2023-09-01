@@ -14,7 +14,7 @@ body
     white-space: nowrap
     overflow-y: scroll
 
-    h2, span, h3
+    h2, span, h3,footer
         color: $fontColor
         font-weight: 600
         font-size: 1em
@@ -47,15 +47,12 @@ button
     gap: .5rem
 footer
     position: relative
-    align-self: center
-    width: 97%
+    align-self: stretch
     top: auto
-    bottom: 0.3rem
     padding: .2rem
-    border: 2px solid $secondarycolor
-    box-shadow: $box-shadow
-    background: $primarycolor
+    background: #ffff
     margin-top: 2rem
+
     a
         @include link
         color: blue
@@ -79,7 +76,7 @@ footer
         @include rowFlex
         justify-content: space-between !important
         align-items: center
-        gap: 1rem
+        gap: .5rem
     span, a
         font-size: .75em
         font-weight: 600
@@ -101,32 +98,42 @@ footer
     align-self: stretch !important
     padding: .5rem
     margin: .2rem
-    background: $primarycolor
+    background: #ffff
     border-radius: 3px
     box-shadow: $box-shadow
     input, button
-        color: $fontColor
         font-size: .8em
         padding: 2px
     h3
-        color: $fontColor
+        color: #888888
         font-size: 1.3em
         font-weight: 800
     .bookInput
         @include rowFlex
         justify-content: space-evenly !important
         align-items: center
-        gap: 1rem
+        gap: .5rem
         input
             flex: .4
         button
             flex: .2
+            background: #0290ff
+            color: #ffff !important
 
 .BookDetails,.BookChapter, .Books
     @include columnFlex
     justify-content: center
     align-items: stretch
     gap: .5rem
+
+.progressBar
+    width: 4em
+    height: 4em
+    align-self: center
+    border-image-source: linear-gradient(to bottom, #0124ea, #379cf6) !important
+
+.CircularProgressbar .CircularProgressbar-path
+    stroke: #0290ff !important
 
 .BookDetails
     gap: .2rem
@@ -144,6 +151,8 @@ footer
     justify-content: space-between !important
     align-items: center
     gap: .4rem
+    div h3
+        font-size: .9em
 
 .headSpan
     border: .01rem solid $fontColor
@@ -156,7 +165,6 @@ footer
     width: 98%
     opacity: .3
     border-radius: 6px
-    box-shadow: $spanShadow
     align-self: center
 
 .headfour
@@ -176,7 +184,7 @@ footer
     padding: .5rem 0.5rem .05rem 1.5rem
     box-shadow: $box-shadow
     background: #ffffff
-.fstDiv
+.fstdiv
     @include rowFlex
     justify-content: space-evenly
     align-items: center
@@ -195,7 +203,7 @@ footer
 
 .accountPic
     img
-        max-width: 18px
+        max-width: 20px
         align-self: flex-end
 
 .HomeComponent
@@ -234,11 +242,6 @@ footer
     justify-content: center
     align-items: center
     margin: 2rem
-
-.link
-    @include link
-    background: none !important
-    color: $fontColor
 
 @media ( min-width: 768px  )
     body
