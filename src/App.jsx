@@ -10,23 +10,26 @@ function App() {
   return (
     <div className="App">
       <nav className="navBar">
-        <Link className="bookstoreTitle" to="/BookStoreReact_Vite/">
-          Geeky Book Store
-        </Link>
-        <div className="navLinks">
-          <Link className="link" to="/BookStoreReact_Vite/books">
-            Books
-          </Link>
-          <Link className="link" to="/BookStoreReact_Vite/categories">
-            Categories
-          </Link>
-          <Link className="link" to="/BookStoreReact_Vite/contact">
-            Contact
-          </Link>
+        <div className="fstDiv">
           <Link className="bookstoreTitle" to="/BookStoreReact_Vite/">
-            <img className="accountPic" src={accountPic} alt="" />
+            Book Store
           </Link>
+          {/* <div className="navLinks"> */}
+            <Link className="link" to="/BookStoreReact_Vite/books">
+              Books
+            </Link>
+            <Link className="link" to="/BookStoreReact_Vite/categories">
+              Categories
+            </Link>
+            <Link className="link" to="/BookStoreReact_Vite/contact">
+              Contact
+            </Link>
+          {/* </div> */}
         </div>
+
+        <Link className="accountPic" to="/BookStoreReact_Vite/">
+          <img src={accountPic} alt="" />
+        </Link>
       </nav>
       <Routes className="Routes">
         <Route path="/BookStoreReact_Vite/" element={<BooksSection />} />
