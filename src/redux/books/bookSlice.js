@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-// import BookItems from './BookItems';
 import axios from 'axios';
 
 const apiUrl =
@@ -12,7 +11,6 @@ const initialState = {
 
 export const getBooks = createAsyncThunk('books/getBooks', async (thunkAPI) => {
   try {
-    // console.log(thunkAPI);
     const resp = await axios.get(apiUrl);
     // to fetch data from API with the desired format
     const transformedBooks = Object.keys(resp.data).map((key) => {
@@ -24,8 +22,6 @@ export const getBooks = createAsyncThunk('books/getBooks', async (thunkAPI) => {
         category: bookData.category,
       };
     });
-
-    console.log(transformedBooks);
     return transformedBooks;
   } catch (error) {
     return thunkAPI.rejectWithValue(error);
@@ -35,8 +31,6 @@ export const getBooks = createAsyncThunk('books/getBooks', async (thunkAPI) => {
 export const postBooks = createAsyncThunk('books/postBooks', async (book, thunkAPI) => {
   try {
     const resp = await axios.post(apiUrl, book);
-
-    console.log(resp);
     return resp.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error);
@@ -46,8 +40,6 @@ export const postBooks = createAsyncThunk('books/postBooks', async (book, thunkA
 export const removeBook = createAsyncThunk('books/removeBook', async (id, thunkAPI) => {
   try {
     const resp = await axios.delete(`${apiUrl}${id}`);
-
-    console.log(resp);
     return resp.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error);
@@ -64,14 +56,10 @@ const bookSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(getBooks.fulfilled, (state, action) => {
-        console.log(action);
         state.isLoading = false;
         state.bookItems = action.payload;
-        console.log(action.payload);
       })
       .addCase(getBooks.rejected, (state, action) => {
-        console.log(action);
-
         state.isLoading = false;
         state.error = action.payload.message;
       })
@@ -80,7 +68,6 @@ const bookSlice = createSlice({
       })
       .addCase(postBooks.fulfilled, (state, action) => {
         state.isLoading = false;
-        // Assuming the response contains the added book data
         state.bookItems.push(action.payload);
       })
       .addCase(postBooks.rejected, (state, action) => {
@@ -92,7 +79,6 @@ const bookSlice = createSlice({
       })
       .addCase(removeBook.fulfilled, (state, action) => {
         state.isLoading = false;
-        // Assuming the response contains the added book data
         state.bookItems.push(action.payload);
       })
       .addCase(removeBook.rejected, (state, action) => {

@@ -1,9 +1,6 @@
-
-
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { postBooks } from '../redux/books/bookSlice';
-// import axios from 'axios';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -24,7 +21,6 @@ const AddBook = () => {
       setTitle('');
       setCategory('');
     }
-
   };
 
   return (

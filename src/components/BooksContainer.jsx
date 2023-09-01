@@ -7,11 +7,9 @@ import Buttons from './Books/Buttons';
 const BooksContainer = () => {
   const { isLoading } = useSelector((state) => state.books);
   const books = useSelector((state) => state.books.bookItems);
-  console.log(books);
 
   const dispatch = useDispatch();
 
-  // Fetch books from the API when the component mounts
   useEffect(() => {
     dispatch(getBooks());
   }, [dispatch]);
@@ -55,4 +53,3 @@ const BooksContainer = () => {
 };
 
 export default BooksContainer;
-

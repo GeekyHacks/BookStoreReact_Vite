@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Buttons = ({ handleBook,book }) => {
+const Buttons = ({ handleBook, book }) => {
   return (
     <div>
       <button href="https://github.com/GeekyHacks" type="a">
@@ -19,8 +19,8 @@ const Buttons = ({ handleBook,book }) => {
 };
 
 Buttons.propTypes = {
-  handleBook: PropTypes.func.isRequired, // Ensure it's a function
-  book: PropTypes.object.isRequired, // Adjust the type as needed
+  handleBook: PropTypes.func.isRequired,
+  book: PropTypes.object.isRequired,
 };
 
 export default Buttons;
