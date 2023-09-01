@@ -16,12 +16,6 @@
 
   <h3><b>RepoTitle</b></h3>
   <p>In this Repo I will create a simplified version of bookstore that allows me to: Display a list of books, Add a book, and Remove a selected book. Its an application of using React_Vite and Redux in the context of a real application.</p>
-
-<div align="center">
-  <img src="assests/images/Personal-portfolio-with-play.gif"  alt="Personal portfolio video">
-  <br>
-
-</div>
 </div>
 
 # 📗 Table of Contents
@@ -88,7 +82,7 @@ To get a local copy up and running, follow these steps:
 
 - Open your Terminal in your VSCode.
 - Navigate to the desired directory[folder] to which you want to clone the repository to
-- [Copy & Paste] git clone you find in the code button https://github.com/GeekyHacks/RepoTitle.git
+- [Copy & Paste] git clone you find in the code button `https://github.com/GeekyHacks/BookStoreReact_Vite.git`
 
 ### Prerequisites
 
@@ -97,13 +91,13 @@ In order to run this project you need:
 - General Understanding of HTML & CSS
 - basic Knowledge of Git Commands
 - basic Knowledge of the Terminal Commands
-- General Understanding of [bundling](https://youtu.be/5IG4UmULyoA) and [webpack](https://youtu.be/IZGNcSuwBZs)
+- Good understanding of react and redux
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-- git clone https://github.com/GeekyHacks/RepoTitle.git
+- `git clone https://github.com/GeekyHacks/BookStoreReact_Vite.git .`
 
 Example commands:
 
@@ -123,7 +117,6 @@ Must-Install-Project-with-the-Following-Programmes:
 - [Git](https://git-scm.com/downloads)
 - [Node.js](https://nodejs.org/en/download)
 - [npm install](https://docs.npmjs.com/cli/v8/commands/npm-install)
-- [webpack](https://webpack.js.org/guides/installation/)
 - [Jest](https://jestjs.io/docs/getting-started)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -164,6 +157,7 @@ I would like to thank...
 - Microverse Review Team
 - Microverse Community in Slack
 - my Mentor @Strangeal
+- [ziplin](https://app.zeplin.io/project/5b35a9e13227086040f8eb75/screen/5b695e29bb8c844f118f9378) design
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
