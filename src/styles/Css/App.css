@@ -113,9 +113,6 @@ footer a {
 .Book span, .Book a {
   font-size: 0.75em;
   font-weight: 600;
-  opacity: 0.4;
-}
-.Book a {
   opacity: 0.6;
 }
 
@@ -127,6 +124,10 @@ footer a {
   padding: 3px 10px;
   background: #0290ff;
   color: #CAF0F8 !important;
+}
+
+.author {
+  color: #4386bf;
 }
 
 .AddBook {

@@ -36,7 +36,7 @@ const BooksContainer = () => {
                 <div className="BookDetails">
                   <span>{book.category}</span>
                   <h2>{book.title}</h2>
-                  <span>{book.author}</span>
+                  <span className='author'>{book.author}</span>
                   <Buttons handleBook={handleRemoveBook} book={book} />
                 </div>
               </div>
