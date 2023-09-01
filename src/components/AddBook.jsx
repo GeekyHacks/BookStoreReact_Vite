@@ -1,12 +1,16 @@
+
+
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/bookSlice';
+import { postBooks } from '../redux/books/bookSlice';
+// import axios from 'axios';
+
 const AddBook = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
   const [author, setAuthor] = useState('');
-  
+
   const handleAddBook = () => {
     if (title && category) {
       const newBook = {
@@ -15,10 +19,12 @@ const AddBook = () => {
         author,
         category,
       };
-      dispatch(addBook(newBook));
+
+      dispatch(postBooks(newBook));
       setTitle('');
       setCategory('');
     }
+
   };
 
   return (
