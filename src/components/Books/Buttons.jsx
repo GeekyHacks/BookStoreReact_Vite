@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 const Buttons = ({ handleBook,book }) => {
   return (
@@ -16,6 +16,11 @@ const Buttons = ({ handleBook,book }) => {
       </button>
     </div>
   );
+};
+
+Buttons.propTypes = {
+  handleBook: PropTypes.func.isRequired, // Ensure it's a function
+  book: PropTypes.object.isRequired, // Adjust the type as needed
 };
 
 export default Buttons;

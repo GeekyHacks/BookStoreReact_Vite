@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeBook, getBooks } from '../redux/books/bookSlice';
 import BookProgress from './Books/BookProgress';

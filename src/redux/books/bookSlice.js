@@ -10,7 +10,7 @@ const initialState = {
   isLoading: false,
 };
 
-export const getBooks = createAsyncThunk('books/getBooks', async (_) => {
+export const getBooks = createAsyncThunk('books/getBooks', async (thunkAPI) => {
   try {
     // console.log(thunkAPI);
     const resp = await axios.get(apiUrl);
@@ -27,28 +27,32 @@ export const getBooks = createAsyncThunk('books/getBooks', async (_) => {
 
     console.log(transformedBooks);
     return transformedBooks;
-  } catch (error) {}
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error);
+  }
 });
 
-
-export const postBooks = createAsyncThunk('books/postBooks', async (book) => {
+export const postBooks = createAsyncThunk('books/postBooks', async (book, thunkAPI) => {
   try {
     const resp = await axios.post(apiUrl, book);
 
     console.log(resp);
     return resp.data;
-  } catch (error) {}
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error);
+  }
 });
 
-export const removeBook = createAsyncThunk('books/removeBook', async (id) => {
+export const removeBook = createAsyncThunk('books/removeBook', async (id, thunkAPI) => {
   try {
     const resp = await axios.delete(`${apiUrl}${id}`);
 
     console.log(resp);
     return resp.data;
-  } catch (error) {}
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error);
+  }
 });
-
 
 const bookSlice = createSlice({
   name: 'books',
@@ -101,4 +105,3 @@ const bookSlice = createSlice({
 export default bookSlice.reducer;
 
 export const { addBook } = bookSlice.actions;
-
