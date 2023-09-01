@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #308393;
+  background: #fafafa;
   font-size: 10px;
   padding: 0.2rem;
   display: flex;
@@ -15,6 +15,7 @@ body {
   justify-content: center;
   align-items: stretch;
   white-space: nowrap;
+  overflow-y: scroll;
 }
 
 body h2,
@@ -25,50 +26,378 @@ body h3 {
   font-size: 1em;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+button {
+  transition: all 0.5s;
+  border-radius: 2px;
+  color: #03045e !important;
+  background-color: #0077b6 !important;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid rgba(3, 4, 94, 0.4);
+  padding: 3px 8px;
+  font-size: 0.75em;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+button:active {
+  transform: scale(0.96);
+  background: #1ba8c5 !important;
+}
+
+button:focus {
+  outline: 0;
 }
 
 ::placeholder {
-  color: #308393;
+  color: #1ba8c5;
   font-weight: 600;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.bookstoreTitle {
+  color: #1ba8c5;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em rgba(100, 108, 255, 0.6666666667));
+.fullWebsite {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 2rem;
 }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.6666666667));
+.App,
+.BooksContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0.5rem;
 }
 
-.read-the-docs {
-  color: #caf0f8 !important;
+footer {
+  position: relative;
+  align-self: center;
+  width: 97%;
+  top: auto;
+  bottom: 0.3rem;
+  padding: 0.2rem;
+  border: 2px solid #1ba8c5;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  background: #caf0f8;
+  margin-top: 2rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+footer a {
+  transition: all 0.5s;
+  opacity: 0.6;
+  cursor: pointer;
+  border: none;
+  color: blue;
+}
+
+.Book {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between !important;
+  align-items: center;
+  align-self: stretch !important;
+  margin: 0.5rem 0.7rem;
+  padding: 0.7rem;
+  background: #caf0f8;
+  border-radius: 3px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  color: #03045e;
+  gap: 2rem;
+}
+
+.Book .fstDiv {
+  flex: 0.5;
+}
+
+.Book .scdDiv {
+  flex: 0.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between !important;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Book span,
+.Book a {
+  font-size: 0.75em;
+  font-weight: 600;
+  opacity: 0.4;
+}
+
+.Book a {
+  opacity: 0.6;
+}
+
+.BookChapter {
+  gap: 0.25rem;
+}
+
+.BookChapter button {
+  margin-top: 0.3rem;
+  padding: 3px 10px;
+}
+
+.AddBook {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+  align-self: stretch !important;
+  padding: 0.5rem;
+  margin: 0.2rem;
+  background: #caf0f8;
+  border-radius: 3px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.AddBook input,
+.AddBook button {
+  color: #03045e;
+  font-size: 0.8em;
+  padding: 2px;
+}
+
+.AddBook h3 {
+  color: #03045e;
+  font-size: 1.3em;
+  font-weight: 800;
+}
+
+.AddBook .bookInput {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly !important;
+  align-items: center;
+  gap: 1rem;
+}
+
+.AddBook .bookInput input {
+  flex: 0.4;
+}
+
+.AddBook .bookInput button {
+  flex: 0.2;
+}
+
+.BookDetails,
+.BookChapter,
+.Books {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+.BookDetails {
+  gap: 0.2rem;
+}
+
+.BookDetails h2 {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.BookDetails div {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch !important;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.BookStatus {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between !important;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.headSpan {
+  border: 0.01rem solid #03045e;
+  height: 1rem;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8), 1px 2px 4px rgba(0, 0, 0, 0.8);
+  border-radius: 0.2rem;
+  opacity: 0.2;
+}
+
+.hSpan {
+  border: 0.01rem solid #03045e;
+  width: 98%;
+  opacity: 0.3;
+  border-radius: 6px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8), 1px 2px 4px rgba(0, 0, 0, 0.8);
+  align-self: center;
+}
+
+.headfour {
+  font-size: 0.85em !important;
+}
+
+.headfour h3 {
+  font-weight: 800;
+  font-size: 1em;
+}
+
+.headfour h4 {
+  font-size: 0.85em;
+  opacity: 0.4;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0.2rem;
+  gap: 0.2rem;
+  justify-content: center;
+  align-self: stretch;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  background: #caf0f8;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.2px solid #1ba8c5;
+  padding: 0.25rem;
+  align-self: stretch;
+}
+
+.navBar h2 {
+  font-weight: 700 !important;
+  font-size: 1em;
+}
+
+.navBar div {
+  display: flex;
+  flex-direction: row;
+  align-items: center !important;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.navBar div span {
+  align-self: center !important;
+}
+
+.accountPic {
+  max-width: 17px;
+}
+
+.HomeComponent {
+  text-align: left;
+  white-space: normal !important;
+  margin: 2rem 3rem;
+}
+
+.HomeComponent h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.HomeComponent p {
+  font-size: 1em;
+  margin-left: 0.5rem;
+}
+
+.HomeComponent ol li {
+  font-size: 1em;
+  margin-left: 3rem;
+}
+
+.CategoriesComponent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.notFound {
+  border-radius: 4px;
+  margin: 5rem auto;
+  padding: 4rem;
+  font-size: 2em;
+  font-weight: 800;
+  color: white;
+  background: #1ba8c5;
+}
+
+.ContactComponent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+.link {
+  transition: all 0.5s;
+  opacity: 0.6;
+  cursor: pointer;
+  border: none;
+  background: none !important;
+  color: #03045e;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
   }
 
-  to {
-    transform: rotate(360deg);
+  .accountPic {
+    max-width: 25px;
+  }
+
+  .navBar {
+    padding: 0.2rem 1.5rem;
+  }
+
+  .headSpan {
+    height: 2.5rem;
+  }
+
+  footer {
+    width: 98%;
+  }
+}
+
+@media (min-width: 999px) {
+  body {
+    font-size: 25px;
+  }
+
+  .accountPic {
+    max-width: 30px;
+  }
+
+  .headSpan {
+    height: 2.8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 30px;
+  }
+
+  .headSpan {
+    height: 3.3rem;
+  }
+
+  footer {
+    width: 98.5%;
   }
 }
