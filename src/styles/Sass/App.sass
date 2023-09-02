@@ -89,7 +89,7 @@ button
 
 .HomeComponent
     text-align: left
-    white-space: normal !important
+    white-space: normal
     margin: 2rem 3rem
 
     h2
@@ -140,7 +140,7 @@ footer
         color: blue
 
 .Book
-    justify-content: space-between !important
+    justify-content: space-between
     padding: .5rem
     background: #ffffff
     border-radius: 3px
@@ -150,7 +150,7 @@ footer
     .scdDiv
         flex: .5
         @include rowFlex
-        justify-content: space-between !important
+        justify-content: space-between
         align-items: center
         gap: .5rem
     span, a
@@ -174,11 +174,8 @@ footer
 
 .BookChapter
     gap: .25rem
-    padding: 0.1rem 0.1rem .1rem .8rem
-    border: solid 2px #e8e8e8
-    border-right: none
-    border-bottom: none
-    border-top: none
+    border-left: solid 2px #e8e8e8
+    padding-left: 1em
     button
         margin-top: .3rem
         padding: 5px 10px
@@ -206,7 +203,7 @@ footer
     justify-content: start
     align-items: center
     button
-        padding: .01 .2rem 0 0
+        padding: 0 .2rem 0 0
     .comment
         padding: 0 .2rem 0 0
 
@@ -223,7 +220,7 @@ footer
     @include columnFlex
     justify-content: center
     gap: .3rem
-    align-self: stretch !important
+    align-self: stretch
     padding: .8rem
     margin: .2rem 1rem
     background: #fafafa
@@ -234,7 +231,7 @@ footer
         border: 1px solid transparent
     .bookInput
         @include rowFlex
-        justify-content: space-evenly !important
+        justify-content: space-evenly
         align-items: stretch
         gap: .5rem
         .inputTitle
@@ -246,7 +243,7 @@ footer
             color: #ffff !important
             margin: 0
 .BookStatus
-    justify-content: space-between !important
+    justify-content: space-between
     gap: .4rem
     div h3
     font-size: .9em
@@ -265,9 +262,9 @@ footer
         img
             width: 40px
     .navBar
-        padding: .7rem 1.5rem !important
+        padding: .7rem 1.5rem
     .BooksComponent
-        margin: 2rem 4rem !important
+        margin: 2rem 4rem
         ul
             gap: 1.5rem
     .hSpan
