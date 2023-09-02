@@ -7,16 +7,14 @@ const BookProgress = () => {
   return (
     <div className="scdDiv">
       <div className="BookStatus">
-        <div className='progressBar'>
+        <div>
           <CircularProgressbar value={percentage} text={''} />
         </div>
-
-        <span className="headSpan" />
         <div>
-          <h3>
+          <h3 className="percentage">
             {percentage}%
-           <br />
-            <span>Completed</span>
+            <br />
+            <span className="completed">Completed</span>
           </h3>
         </div>
       </div>

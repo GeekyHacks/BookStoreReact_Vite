@@ -1,5 +1,4 @@
 @import global
-
 *
     margin: 0
     padding: 0
@@ -18,50 +17,71 @@ body
         color: $fontColor
         font-weight: 600
         font-size: 1em
+.bookstoreTitle, .fullWebsite, .CategoriesComponent,.ContactComponent,.App,.BooksContainer,.BookDetails,.BookChapter, .Books
+    @include columnFlex
+    align-items: center
 
 button
     @include button
     padding: 3px 8px
     font-size: .75em
+
 ::placeholder
-    color: $secondarycolor
+    color: #c4c4c4
     font-weight: 600
 
+.bookstoreTitle, .link, .cate,.completed,::placeholder,.addBookH3
+    font-family: 'Montserrat', sans-serif
+.percentage
+    font-size: 1em
+.completed
+    font-size: .7em
+.addBookH3
+    color: #888888
+    font-size: 1em
+    font-weight: 700
+    margin-bottom: .2rem
+.bookTitle, .author,.editSect button
+    font-family: 'Roboto Slab', serif
+
 .bookstoreTitle
-    @include columnFlex
     justify-content: center
-    align-items: center
     color: #0290ff
     margin-bottom: .17rem
     font-weight: bold
+    font-stretch: normal
+    font-style: normal
+    line-height: normal
+    letter-spacing: normal
     font-size: 1.2em
 
 .fullWebsite
-    @include columnFlex
     justify-content: space-evenly
     align-items: stretch
     gap: 2rem
 
-.navBar
+.navBar,.fstdiv,.Book,.BookStatus
     @include rowFlex
-    justify-content: space-between
     align-items: center
+
+.navBar
+    justify-content: space-between
     align-self: stretch
     padding: .5rem 0.5rem .2rem 1.5rem
     box-shadow: $box-shadow
     background: #ffffff
 
 .fstdiv
-    @include rowFlex
     justify-content: space-evenly
-    align-items: center
     gap: .6rem
 
 .link
+    color: #121212
     font-size: .9em
-    &:active, &:focus
-        opacity: 50
-
+    &:active
+        opacity: .5
+    &:focus
+        opacity: .5
 .accountPic
     img
         width: 20px
@@ -85,7 +105,6 @@ button
         margin-left: 3rem
 
 .CategoriesComponent
-    @include columnFlex
     justify-content: center
     align-items: stretch
 
@@ -99,37 +118,33 @@ button
     background: $secondarycolor
 
 .ContactComponent
-    @include columnFlex
     justify-content: center
-    align-items: center
     margin: 2rem
 .App,.BooksContainer
-    @include columnFlex
     justify-content: center
     align-items: stretch
     gap: .5rem
 footer
+    font-family: 'Roboto Slab', serif
     font-size: .75em
-    font-weight: 300 !important
+    font-weight: 200
     position: relative
     align-self: stretch
     top: auto
     padding: .5rem
     background: #ffff
     margin-top: 2rem
+    opacity: .6
     a
         @include link
         color: blue
 
 .Book
-    @include rowFlex
     justify-content: space-between !important
-    align-items: center
     padding: .5rem
     background: #ffffff
     border-radius: 3px
     color: $fontColor
-    // gap: 2rem
     .fstDiv
         flex: .5
     .scdDiv
@@ -147,23 +162,26 @@ footer
     ul
         @include columnFlex
         justify-content: center
-        // align-items: stretch
         gap: .5rem
 
 .author
     color: #4386bf
 
 .BookDetails,.BookChapter, .Books
-    @include columnFlex
     justify-content: center
     align-items: stretch
     gap: .5rem
 
 .BookChapter
     gap: .25rem
+    padding: 0.1rem 0.1rem .1rem .8rem
+    border: solid 2px #e8e8e8
+    border-right: none
+    border-bottom: none
+    border-top: none
     button
         margin-top: .3rem
-        padding: 3px 10px
+        padding: 5px 10px
         background: #0290ff
         color: $primarycolor !important
         font-size: .4em
@@ -175,33 +193,31 @@ footer
         line-height: normal
         letter-spacing: 0.5px
 
-.progressBar
-    width: 4em
-    height: 4em
-    align-self: center
-    border-image-source: linear-gradient(to bottom, #0124ea, #379cf6) !important
-
-.CircularProgressbar .CircularProgressbar-path
-    stroke: #0290ff !important
-
+.CircularProgressbar
+    max-width: 3em
+    max-height: 3em
 .BookDetails
     gap: .2rem
     h2
         font-size: 1.3em
         font-weight: 700
-    div
-        @include rowFlex
-        justify-content: stretch !important
-        align-items: center
-        gap: .5rem
+.editSect
+    @include rowFlex
+    justify-content: start
+    align-items: center
+    button
+        padding: .01 .2rem 0 0
+    .comment
+        padding: 0 .2rem 0 0
+
 .headfour
-    font-size: .85em !important
+    font-family: 'Roboto Slab', serif
+    font-size: .7em
     h3
         font-weight: 800
-        font-size: 1em
+        font-size: .9em
     h4
         font-size: .85em
-        opacity: .4
 
 .AddBook
     @include columnFlex
@@ -214,39 +230,27 @@ footer
     border-radius: 3px
     input, button
         font-size: .8em
-        padding: 2px
     input
         border: 1px solid transparent
-    h3
-        color: #888888
-        font-size: 1.3em
-        font-weight: 800
     .bookInput
         @include rowFlex
         justify-content: space-evenly !important
         align-items: stretch
         gap: .5rem
-        .bookTitle
+        .inputTitle
             flex: .8
         button
+            font-family: 'Roboto Slab', serif
             flex: .3
             background: #0290ff
             color: #ffff !important
             margin: 0
 .BookStatus
-    @include rowFlex
     justify-content: space-between !important
-    align-items: center
     gap: .4rem
     div h3
-        font-size: .9em
+    font-size: .9em
 
-.headSpan
-    border: .01rem solid $fontColor
-    height: 1rem
-    box-shadow: $spanShadow
-    border-radius: .2rem
-    opacity: .2
 .hSpan
     height: 0.25rem
     margin: .5rem 1rem

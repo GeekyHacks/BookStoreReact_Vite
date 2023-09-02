@@ -34,8 +34,8 @@ const BooksContainer = () => {
             <li key={book.item_id} className="Book">
               <div className="fstDiv">
                 <div className="BookDetails">
-                  <span>{book.category}</span>
-                  <h2>{book.title}</h2>
+                  <span className="cate">{book.category}</span>
+                  <h2 className="bookTitle">{book.title}</h2>
                   <span className="author">{book.author}</span>
                   <Buttons handleBook={handleRemoveBook} book={book} />
                 </div>

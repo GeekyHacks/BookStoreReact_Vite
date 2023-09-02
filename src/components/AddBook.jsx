@@ -24,7 +24,7 @@ const AddBook = () => {
 
   return (
     <div className="AddBook">
-      <h3>Add new Book</h3>
+      <h3 className='addBookH3'>Add new Book</h3>
       <div className="bookInput">
         <input
           type="text"
@@ -32,7 +32,7 @@ const AddBook = () => {
           placeholder="Book Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="bookTitle"
+          className="inputTitle"
         />
         <input
           type="text"

@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 
 const Buttons = ({ handleBook, book }) => {
   return (
-    <div>
-      <button href="https://github.com/GeekyHacks" type="a">
+    <div className='editSect'>
+      <button href="https://github.com/GeekyHacks" type="a" className='comment'>
         Comments
       </button>
       <span>|</span>

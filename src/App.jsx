@@ -12,7 +12,7 @@ function App() {
       <nav className="navBar">
         <div className="fstdiv">
           <Link className="bookstoreTitle" to="/BookStoreReact_Vite/">
-            Book Store
+            Bookstore CMS
           </Link>
           {/* <div className="navLinks"> */}
             <Link className="link" to="/BookStoreReact_Vite/books">
