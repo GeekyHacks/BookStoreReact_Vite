@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +16,10 @@ body {
   white-space: nowrap;
   overflow-y: scroll;
 }
-body h2, body span, body h3 {
+
+body h2,
+body span,
+body h3 {
   color: #121212;
   font-weight: 600;
   font-size: 1em;
@@ -32,16 +36,18 @@ button {
   padding: 3px 8px;
   font-size: 0.75em;
 }
+
 button:active {
   transform: scale(0.96);
-  background: #ffffff !important;
+  background: #fff !important;
 }
+
 button:focus {
   outline: 0;
 }
 
 ::placeholder {
-  color: #ffffff;
+  color: #fff;
   font-weight: 600;
 }
 
@@ -72,7 +78,7 @@ button:focus {
   align-self: stretch;
   padding: 0.5rem 0.5rem 0.2rem 1.5rem;
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1), 5px 2px 8px rgba(0, 0, 0, 0.1);
-  background: #ffffff;
+  background: #fff;
 }
 
 .fstdiv {
@@ -86,7 +92,9 @@ button:focus {
 .link {
   font-size: 0.9em;
 }
-.link:active, .link:focus {
+
+.link:active,
+.link:focus {
   opacity: 50;
 }
 
@@ -100,14 +108,17 @@ button:focus {
   white-space: normal !important;
   margin: 2rem 3rem;
 }
+
 .HomeComponent h2 {
   font-size: 1.2em;
   font-weight: 600;
 }
+
 .HomeComponent p {
   font-size: 1em;
   margin-left: 0.5rem;
 }
+
 .HomeComponent ol li {
   font-size: 1em;
   margin-left: 3rem;
@@ -127,7 +138,7 @@ button:focus {
   font-size: 2em;
   font-weight: 800;
   color: #121212;
-  background: #ffffff;
+  background: #fff;
 }
 
 .ContactComponent {
@@ -138,7 +149,8 @@ button:focus {
   margin: 2rem;
 }
 
-.App, .BooksContainer {
+.App,
+.BooksContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,6 +168,7 @@ footer {
   background: white;
   margin-top: 2rem;
 }
+
 footer a {
   transition: all 0.5s;
   opacity: 0.6;
@@ -170,13 +183,15 @@ footer a {
   justify-content: space-between !important;
   align-items: center;
   padding: 0.5rem;
-  background: #ffffff;
+  background: #fff;
   border-radius: 3px;
   color: #121212;
 }
+
 .Book .fstDiv {
   flex: 0.5;
 }
+
 .Book .scdDiv {
   flex: 0.5;
   display: flex;
@@ -185,7 +200,9 @@ footer a {
   align-items: center;
   gap: 0.5rem;
 }
-.Book span, .Book a {
+
+.Book span,
+.Book a {
   font-size: 0.75em;
   font-weight: 600;
   opacity: 0.6;
@@ -194,6 +211,7 @@ footer a {
 .BooksComponent {
   margin: 0.5rem 1rem;
 }
+
 .BooksComponent ul {
   display: flex;
   flex-direction: column;
@@ -205,7 +223,9 @@ footer a {
   color: #4386bf;
 }
 
-.BookDetails, .BookChapter, .Books {
+.BookDetails,
+.BookChapter,
+.Books {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -216,11 +236,12 @@ footer a {
 .BookChapter {
   gap: 0.25rem;
 }
+
 .BookChapter button {
   margin-top: 0.3rem;
   padding: 3px 10px;
   background: #0290ff;
-  color: #CAF0F8 !important;
+  color: #caf0f8 !important;
   font-size: 0.4em;
   align-self: flex-start;
   text-align: left;
@@ -245,10 +266,12 @@ footer a {
 .BookDetails {
   gap: 0.2rem;
 }
+
 .BookDetails h2 {
   font-size: 1.3em;
   font-weight: 700;
 }
+
 .BookDetails div {
   display: flex;
   flex-direction: row;
@@ -260,10 +283,12 @@ footer a {
 .headfour {
   font-size: 0.85em !important;
 }
+
 .headfour h3 {
   font-weight: 800;
   font-size: 1em;
 }
+
 .headfour h4 {
   font-size: 0.85em;
   opacity: 0.4;
@@ -280,18 +305,23 @@ footer a {
   background: #fafafa;
   border-radius: 3px;
 }
-.AddBook input, .AddBook button {
+
+.AddBook input,
+.AddBook button {
   font-size: 0.8em;
   padding: 2px;
 }
+
 .AddBook input {
   border: 1px solid transparent;
 }
+
 .AddBook h3 {
-  color: #888888;
+  color: #888;
   font-size: 1.3em;
   font-weight: 800;
 }
+
 .AddBook .bookInput {
   display: flex;
   flex-direction: row;
@@ -299,9 +329,11 @@ footer a {
   align-items: stretch;
   gap: 0.5rem;
 }
+
 .AddBook .bookInput .bookTitle {
   flex: 0.8;
 }
+
 .AddBook .bookInput button {
   flex: 0.3;
   background: #0290ff;
@@ -316,6 +348,7 @@ footer a {
   align-items: center;
   gap: 0.4rem;
 }
+
 .BookStatus div h3 {
   font-size: 0.9em;
 }
@@ -340,56 +373,69 @@ footer a {
   body {
     font-size: 18px;
   }
+
   .accountPic img {
     width: 40px;
   }
+
   .navBar {
     padding: 0.7rem 1.5rem !important;
   }
+
   .BooksComponent {
     margin: 2rem 4rem !important;
   }
+
   .BooksComponent ul {
     gap: 1.5rem;
   }
+
   .hSpan {
     height: 0.25rem;
     margin: 0.5rem 4rem;
   }
+
   .AddBook {
     margin: 2rem 4rem;
   }
+
   .headSpan {
     height: 2.5rem;
   }
+
   footer {
     width: 98%;
   }
 }
+
 @media (min-width: 999px) {
   body {
     font-size: 25px;
   }
+
   .accountPic img {
     width: 50px;
   }
+
   .headSpan {
     height: 2.8rem;
   }
+
   .book {
     margin: 1.5rem 10rem;
   }
 }
+
 @media (min-width: 1200px) {
   body {
     font-size: 30px;
   }
+
   .headSpan {
     height: 3.3rem;
   }
+
   footer {
     width: 98.5%;
   }
 }
-
-/*# sourceMappingURL=App.css.map */
