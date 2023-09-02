@@ -6,14 +6,13 @@ const AddBook = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
-  const [author, setAuthor] = useState('');
 
   const handleAddBook = () => {
     if (title && category) {
       const newBook = {
         item_id: `item${Date.now()}`,
         title,
-        author,
+        author:"author name",
         category,
       };
 
@@ -27,21 +26,21 @@ const AddBook = () => {
     <div className="AddBook">
       <h3>Add new Book</h3>
       <div className="bookInput">
-        <input type="text" required placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-        {/* <input
+        <input
           type="text"
           required
-          placeholder="Author Name"
-          value={author}
-          onChange={(e) => setAuthor(e.target.value)}
-        /> */}
-
+          placeholder="Book Title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          className="bookTitle"
+        />
         <input
           type="text"
           required
           placeholder="Category"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
+          className="author"
         />
         <button type="button" onClick={handleAddBook}>
           Add
