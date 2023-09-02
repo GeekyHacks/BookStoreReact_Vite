@@ -4,34 +4,12 @@ $InterFont: "Inter", sans-serif
 $primarycolor: #CAF0F8
 $secondarycolor: #ffffff
 $fontColor: #121212
-$box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1), 5px 2px 8px rgba(0, 0, 0, 0.1)
+$box-shadow: 5px 5px 2px rgba(233, 223, 223, 0.1), 2px 2px 2px rgba(0, 0, 0, 0.1)
 $spanShadow: 1px 2px 4px rgba(0, 0, 0, .6), 1px 2px 4px rgba(0, 0, 0, .6)
 $qrpadding: calc( 12% - 80px )
 $Qrpadding: calc( 25% - 120px )
 $qlpadding: calc( 12% - 80px )
 $Qlpadding: calc( 25% - 120px )
-
-// @font-face
-//     font-family: 'Montserrat'
-//     src: url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@200;300;400;500;600;700;800&family=Roboto+Slab:wght@100&family=Roboto:wght@700&display=swap'),
-//     font-weight: 200 !important
-//     font-style: italic
-
-// // Font 2
-//     &
-//         font-family: 'Font2'
-//         src: url('../fonts/font2.woff2') format('woff2'),
-//        url('../fonts/font2.woff') format('woff');
-//         font-weight: normal
-//         font-style: normal
-
-// // Font 3
-//     &
-//         font-family: 'Font3'
-//         src: url('../fonts/font3.woff2') format('woff2'),
-//        url('../fonts/font3.woff') format('woff');
-//         font-weight: normal
-//         font-style: normal
 
 @mixin columnFlex
     display: flex
@@ -44,9 +22,7 @@ $Qlpadding: calc( 25% - 120px )
 @mixin button
     transition: all 0.5s
     border-radius: 2px
-    // font-weight: 600
-    color: #4386bf !important
-    // background-color: #0077B6 !important
+    color: #4386bf 
     background: none
     cursor: pointer
     text-align: center
@@ -54,14 +30,11 @@ $Qlpadding: calc( 25% - 120px )
 
     &:active
         transform: scale(0.96)
-        background: $secondarycolor !important
+        background: $secondarycolor 
 
     &:focus
         outline: 0
-@mixin transparentLink
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
-    color: $fontColor !important
+
 
 @mixin link
     transition: all 0.5s

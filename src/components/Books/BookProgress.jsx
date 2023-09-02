@@ -23,7 +23,7 @@ const BookProgress = () => {
           <h4>CURRENT CHAPTER</h4>
           <h3>Chapter 17</h3>
         </div>
-        <button type="button">UPDATE PROGRESS</button>
+        <button type="button" className='updatePro'>UPDATE PROGRESS</button>
       </div>
     </div>
   );

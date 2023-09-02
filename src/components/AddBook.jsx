@@ -42,7 +42,7 @@ const AddBook = () => {
           onChange={(e) => setCategory(e.target.value)}
           className="author"
         />
-        <button type="button" onClick={handleAddBook}>
+        <button type="button" onClick={handleAddBook} className='addBtn'>
           Add
         </button>
       </div>

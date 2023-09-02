@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@200;300;400;500;600;700;800&family=Roboto+Slab:wght@100&family=Roboto:wght@700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -15,25 +14,15 @@ body {
   align-items: stretch;
   white-space: nowrap;
   overflow-y: scroll;
+  font-family: "Montserrat", sans-serif;
 }
-
-body h2,
-body span,
-body h3 {
+body h2, body span, body h3 {
   color: #121212;
   font-weight: 600;
   font-size: 1em;
 }
 
-.bookstoreTitle,
-.fullWebsite,
-.CategoriesComponent,
-.ContactComponent,
-.App,
-.BooksContainer,
-.BookDetails,
-.BookChapter,
-.Books {
+.bookstoreTitle, .fullWebsite, .CategoriesComponent, .ContactComponent, .App, .BooksContainer, .BookDetails, .BookChapter, .Books {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,7 +31,7 @@ body h3 {
 button {
   transition: all 0.5s;
   border-radius: 2px;
-  color: #4386bf !important;
+  color: #4386bf;
   background: none;
   cursor: pointer;
   text-align: center;
@@ -50,12 +39,10 @@ button {
   padding: 3px 8px;
   font-size: 0.75em;
 }
-
 button:active {
   transform: scale(0.96);
-  background: #fff !important;
+  background: #ffffff;
 }
-
 button:focus {
   outline: 0;
 }
@@ -63,15 +50,6 @@ button:focus {
 ::placeholder {
   color: #c4c4c4;
   font-weight: 600;
-}
-
-.bookstoreTitle,
-.link,
-.cate,
-.completed,
-::placeholder,
-.addBookH3 {
-  font-family: "Montserrat", sans-serif;
 }
 
 .percentage {
@@ -83,15 +61,13 @@ button:focus {
 }
 
 .addBookH3 {
-  color: #888;
+  color: #888888;
   font-size: 1em;
   font-weight: 700;
   margin-bottom: 0.2rem;
 }
 
-.bookTitle,
-.author,
-.editSect button {
+.bookTitle, .author, .editSect button {
   font-family: "Roboto Slab", serif;
 }
 
@@ -99,6 +75,7 @@ button:focus {
   justify-content: center;
   color: #0290ff;
   margin-bottom: 0.17rem;
+  margin-right: 0.4rem;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -113,10 +90,7 @@ button:focus {
   gap: 2rem;
 }
 
-.navBar,
-.fstdiv,
-.Book,
-.BookStatus {
+.navBar, .fstdiv, .Book, .BookStatus {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -125,9 +99,9 @@ button:focus {
 .navBar {
   justify-content: space-between;
   align-self: stretch;
-  padding: 0.5rem 0.5rem 0.2rem 1.5rem;
-  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1), 5px 2px 8px rgba(0, 0, 0, 0.1);
-  background: #fff;
+  padding: 0.5rem 2.5rem 0.2rem 1.5rem;
+  box-shadow: 5px 5px 2px rgba(233, 223, 223, 0.1), 2px 2px 2px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
 }
 
 .fstdiv {
@@ -139,11 +113,9 @@ button:focus {
   color: #121212;
   font-size: 0.9em;
 }
-
 .link:active {
   opacity: 0.5;
 }
-
 .link:focus {
   opacity: 0.5;
 }
@@ -158,17 +130,14 @@ button:focus {
   white-space: normal;
   margin: 2rem 3rem;
 }
-
 .HomeComponent h2 {
   font-size: 1.2em;
   font-weight: 600;
 }
-
 .HomeComponent p {
   font-size: 1em;
   margin-left: 0.5rem;
 }
-
 .HomeComponent ol li {
   font-size: 1em;
   margin-left: 3rem;
@@ -186,7 +155,7 @@ button:focus {
   font-size: 2em;
   font-weight: 800;
   color: #121212;
-  background: #fff;
+  background: #ffffff;
 }
 
 .ContactComponent {
@@ -194,8 +163,7 @@ button:focus {
   margin: 2rem;
 }
 
-.App,
-.BooksContainer {
+.App, .BooksContainer {
   justify-content: center;
   align-items: stretch;
   gap: 0.5rem;
@@ -213,7 +181,6 @@ footer {
   margin-top: 2rem;
   opacity: 0.6;
 }
-
 footer a {
   transition: all 0.5s;
   opacity: 0.6;
@@ -224,27 +191,23 @@ footer a {
 
 .Book {
   justify-content: space-between;
-  padding: 0.5rem;
-  background: #fff;
-  border-radius: 3px;
+  padding: 0.7rem 1.5rem 0.5rem 1rem;
+  background: #ffffff;
+  border-radius: 4px;
   color: #121212;
 }
-
 .Book .fstDiv {
-  flex: 0.5;
+  flex: 0.4;
 }
-
 .Book .scdDiv {
-  flex: 0.5;
+  flex: 0.6;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 2rem;
 }
-
-.Book span,
-.Book a {
+.Book span, .Book a {
   font-size: 0.75em;
   font-weight: 600;
   opacity: 0.6;
@@ -253,7 +216,6 @@ footer a {
 .BooksComponent {
   margin: 0.5rem 1rem;
 }
-
 .BooksComponent ul {
   display: flex;
   flex-direction: column;
@@ -265,9 +227,7 @@ footer a {
   color: #4386bf;
 }
 
-.BookDetails,
-.BookChapter,
-.Books {
+.BookDetails, .BookChapter, .Books {
   justify-content: center;
   align-items: stretch;
   gap: 0.5rem;
@@ -278,12 +238,11 @@ footer a {
   border-left: solid 2px #e8e8e8;
   padding-left: 1em;
 }
-
 .BookChapter button {
   margin-top: 0.3rem;
   padding: 5px 10px;
   background: #0290ff;
-  color: #caf0f8 !important;
+  color: #CAF0F8;
   font-size: 0.4em;
   align-self: flex-start;
   text-align: left;
@@ -302,7 +261,6 @@ footer a {
 .BookDetails {
   gap: 0.2rem;
 }
-
 .BookDetails h2 {
   font-size: 1.3em;
   font-weight: 700;
@@ -314,11 +272,9 @@ footer a {
   justify-content: start;
   align-items: center;
 }
-
 .editSect button {
   padding: 0 0.2rem 0 0;
 }
-
 .editSect .comment {
   padding: 0 0.2rem 0 0;
 }
@@ -327,12 +283,10 @@ footer a {
   font-family: "Roboto Slab", serif;
   font-size: 0.7em;
 }
-
 .headfour h3 {
   font-weight: 800;
   font-size: 0.9em;
 }
-
 .headfour h4 {
   font-size: 0.85em;
 }
@@ -348,16 +302,13 @@ footer a {
   background: #fafafa;
   border-radius: 3px;
 }
-
-.AddBook input,
-.AddBook button {
+.AddBook input {
   font-size: 0.8em;
+  padding: 0.2rem;
 }
-
 .AddBook input {
   border: 1px solid transparent;
 }
-
 .AddBook .bookInput {
   display: flex;
   flex-direction: row;
@@ -365,23 +316,25 @@ footer a {
   align-items: stretch;
   gap: 0.5rem;
 }
-
 .AddBook .bookInput .inputTitle {
   flex: 0.8;
-}
-
-.AddBook .bookInput button {
-  font-family: "Roboto Slab", serif;
-  flex: 0.3;
-  background: #0290ff;
-  color: white !important;
-  margin: 0;
 }
 
 .BookStatus {
   justify-content: space-between;
   gap: 0.4rem;
   font-size: 0.9em;
+}
+.addBtn {
+  font-family: "Roboto Slab", serif;
+  flex: 0.3;
+  background: #0290ff;
+  margin: 0;
+  color: white;
+}
+
+.updatePro {
+  color: white;
 }
 
 .hSpan {
@@ -396,69 +349,59 @@ footer a {
   body {
     font-size: 18px;
   }
-
   .accountPic img {
     width: 40px;
   }
-
   .navBar {
     padding: 0.7rem 1.5rem;
   }
-
-  .BooksComponent {
-    margin: 2rem 4rem;
+  .Book {
+    padding: 1.5rem 5rem 1.5rem 1rem;
   }
-
+  .BooksComponent {
+    margin: 2rem 5rem;
+  }
   .BooksComponent ul {
     gap: 1.5rem;
   }
-
   .hSpan {
     height: 0.25rem;
     margin: 0.5rem 4rem;
   }
-
   .AddBook {
     margin: 2rem 4rem;
   }
-
   .headSpan {
     height: 2.5rem;
   }
-
   footer {
     width: 98%;
   }
 }
-
 @media (min-width: 999px) {
   body {
     font-size: 25px;
   }
-
   .accountPic img {
     width: 50px;
   }
-
   .headSpan {
     height: 2.8rem;
   }
-
   .book {
     margin: 1.5rem 10rem;
   }
 }
-
 @media (min-width: 1200px) {
   body {
     font-size: 30px;
   }
-
   .headSpan {
     height: 3.3rem;
   }
-
   footer {
     width: 98.5%;
   }
 }
+
+/*# sourceMappingURL=App.css.map */
