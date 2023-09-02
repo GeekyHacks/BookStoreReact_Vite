@@ -2,15 +2,15 @@ import PropTypes from 'prop-types';
 
 const Buttons = ({ handleBook, book }) => {
   return (
-    <div className='editSect'>
-      <button href="https://github.com/GeekyHacks" type="a" className='comment'>
+    <div className="editSect">
+      <button href="https://github.com/GeekyHacks" type="a" className="comment">
         Comments
       </button>
-      <span>|</span>
-      <button onClick={() => handleBook(book.item_id)} type="button">
+      {/* <span className="hSpan"></span> */}
+      <button onClick={() => handleBook(book.item_id)} type="button" className='remove'>
         Remove
       </button>
-      <span>|</span>
+      {/* <span className="hSpan"></span> */}
       <button type="a" href="https://github.com/GeekyHacks">
         Edit
       </button>
