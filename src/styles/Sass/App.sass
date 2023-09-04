@@ -1,5 +1,4 @@
 @import global
-
 *
     margin: 0
     padding: 0
@@ -8,201 +7,89 @@
 body
     background: #fafafa
     font-size: 10px
-    padding: .2rem
     @include columnFlex
     justify-content: center
     align-items: stretch
     white-space: nowrap
     overflow-y: scroll
+    font-family: 'Montserrat', sans-serif
 
     h2, span, h3
         color: $fontColor
         font-weight: 600
         font-size: 1em
+.bookstoreTitle, .fullWebsite, .CategoriesComponent,.ContactComponent,.App,.BooksContainer,.BookDetails,.BookChapter, .Books
+    @include columnFlex
+    align-items: center
 
 button
     @include button
     padding: 3px 8px
     font-size: .75em
+
 ::placeholder
-    color: $secondarycolor
+    color: #c4c4c4
     font-weight: 600
 
-.bookstoreTitle
-    color: $secondarycolor
+.percentage
+    font-size: 1em
+.completed
+    font-size: .7em
+.addBookH3
+    color: #888888
+    font-size: 1em
     font-weight: 700
-    @include columnFlex
+    margin-bottom: .2rem
+.bookTitle, .author,.editSect button
+    font-family: 'Roboto Slab', serif
+
+.bookstoreTitle
     justify-content: center
-    align-items: center
+    color: #0290ff
+    margin-bottom: .17rem
+    margin-right: .4rem
+    font-weight: bold
+    font-stretch: normal
+    font-style: normal
+    line-height: normal
+    letter-spacing: normal
+    font-size: 1.2em
 
 .fullWebsite
-    @include columnFlex
     justify-content: space-evenly
     align-items: stretch
     gap: 2rem
 
-.App,.BooksContainer
-    @include columnFlex
-    justify-content: center
-    align-items: stretch
-    gap: .5rem
-footer
-    position: relative
-    align-self: center
-    width: 97%
-    top: auto
-    bottom: 0.3rem
-    padding: .2rem
-    border: 2px solid $secondarycolor
-    box-shadow: $box-shadow
-    background: $primarycolor
-    margin-top: 2rem
-    a
-        @include link
-        color: blue
-
-.Book
+.navBar,.fstdiv,.Book,.BookStatus
     @include rowFlex
-    justify-content: space-between !important
     align-items: center
-    align-self: stretch !important
-    margin: .5rem .7rem
-    padding: .7rem
-    background: $primarycolor
-    border-radius: 3px
-    box-shadow: $box-shadow
-    color: $fontColor
-    gap: 2rem
-    .fstDiv
-        flex: .5
-    .scdDiv
-        flex: .5
-        @include rowFlex
-        justify-content: space-between !important
-        align-items: center
-        gap: 1rem
-    span, a
-        font-size: .75em
-        font-weight: 600
-        opacity: .4
-    a
-        opacity: .6
-.BookChapter
-    gap: .25rem
-    button
-        margin-top: .3rem
-        padding: 3px 10px
-
-.AddBook
-    @include columnFlex
-    justify-content: center
-    gap: .3rem
-    align-self: stretch !important
-    padding: .5rem
-    margin: .2rem
-    background: $primarycolor
-    border-radius: 3px
-    box-shadow: $box-shadow
-    input, button
-        color: $fontColor
-        font-size: .8em
-        padding: 2px
-    h3
-        color: $fontColor
-        font-size: 1.3em
-        font-weight: 800
-    .bookInput
-        @include rowFlex
-        justify-content: space-evenly !important
-        align-items: center
-        gap: 1rem
-        input
-            flex: .4
-        button
-            flex: .2
-
-.BookDetails,.BookChapter, .Books
-    @include columnFlex
-    justify-content: center
-    align-items: stretch
-    gap: .5rem
-
-.BookDetails
-    gap: .2rem
-    h2
-        font-size: 1.3em
-        font-weight: 700
-    div
-        @include rowFlex
-        justify-content: stretch !important
-        align-items: center
-        gap: .5rem
-
-.BookStatus
-    @include rowFlex
-    justify-content: space-between !important
-    align-items: center
-    gap: .4rem
-
-.headSpan
-    border: .01rem solid $fontColor
-    height: 1rem
-    box-shadow: $spanShadow
-    border-radius: .2rem
-    opacity: .2
-.hSpan
-    border: .01rem solid $fontColor
-    width: 98%
-    opacity: .3
-    border-radius: 6px
-    box-shadow: $spanShadow
-    align-self: center
-
-.headfour
-    font-size: .85em !important
-    h3
-        font-weight: 800
-        font-size: 1em
-    h4
-        font-size: .85em
-        opacity: .4
-
-nav
-    @include columnFlex
-    padding: .2rem
-    gap: .2rem
-    justify-content: center
-    align-self: stretch
-    box-shadow: $box-shadow
-    background: $primarycolor
 
 .navBar
-    @include rowFlex
     justify-content: space-between
-    align-items: center
-    border: .2px solid $secondarycolor
-    padding: .25rem
     align-self: stretch
+    padding: .5rem 2.5rem .2rem 1.5rem
+    box-shadow: $box-shadow
+    background: #ffffff
 
-    h2
-        font-weight: 700 !important
-        font-size: 1em
+.fstdiv
+    justify-content: space-evenly
+    gap: .6rem
 
-    div
-        @include rowFlex
-        align-items: center !important
-        justify-content: center
-        gap: 1rem
-
-        span
-            align-self: center !important
-
+.NavLink
+    color: #121212
+    font-size: .7em
+    &:active
+        opacity: .5
+    &:focus
+        opacity: .5
 .accountPic
-    max-width: 17px
+    img
+        height: 22px
+        align-self: flex-end
 
 .HomeComponent
     text-align: left
-    white-space: normal !important
+    white-space: normal
     margin: 2rem 3rem
 
     h2
@@ -216,13 +103,8 @@ nav
     ol li
         font-size: 1em
         margin-left: 3rem
-// .Routes
-//     @include columnFlex
-//     justify-content: center
-//     align-items: stretch
 
 .CategoriesComponent
-    @include columnFlex
     justify-content: center
     align-items: stretch
 
@@ -232,41 +114,188 @@ nav
     padding: 4rem
     font-size: 2em
     font-weight: 800
-    color: white
+    color: #121212
     background: $secondarycolor
 
 .ContactComponent
+    justify-content: center
+    margin: 2rem
+.App,.BooksContainer
+    justify-content: center
+    align-items: stretch
+    gap: .5rem
+footer
+    font-family: 'Roboto Slab', serif
+    font-size: .75em
+    font-weight: 200
+    position: relative
+    align-self: stretch
+    top: auto
+    padding: .5rem
+    background: #ffff
+    margin-top: 2rem
+    opacity: .6
+    a
+        @include link
+        color: blue
+
+.Book
+    justify-content: space-between
+    padding: .7rem 1.5rem .5rem 1rem
+    background: #ffffff
+    border-radius: 4px
+    color: $fontColor
+    .fstDiv
+        flex: .4
+    .scdDiv
+        flex: .6
+        @include rowFlex
+        align-items: center
+        justify-content: center
+        gap: 2rem
+    span, a
+        font-size: .75em
+        font-weight: 600
+        opacity: .6
+.BooksComponent
+    margin: .5rem 1rem
+    ul
+        @include columnFlex
+        justify-content: center
+        gap: .5rem
+
+.author
+    color: #4386bf
+
+.BookDetails,.BookChapter, .Books
+    justify-content: center
+    align-items: stretch
+    gap: .5rem
+
+.BookChapter
+    gap: .25rem
+    border-left: solid 2px #e8e8e8
+    padding-left: 1em
+    button
+        margin-top: .3rem
+        padding: 5px 10px
+        background: #0290ff
+        color: $primarycolor
+        font-size: .4em
+        align-self: flex-start
+        text-align: left
+        font-weight: 300
+        font-stretch: normal
+        font-style: normal
+        line-height: normal
+        letter-spacing: 0.5px
+
+.CircularProgressbar
+    max-width: 3em
+    max-height: 3em
+
+.BookDetails
+    gap: .2rem
+    h2
+        font-size: 1.3em
+        font-weight: 700
+.editSect
+    @include rowFlex
+    justify-content: start
+    .comment, .remove
+        padding: 0 .2rem 0 0
+        border-right: solid 1px #e8e8e8
+    .remove
+        margin-left: .5rem
+
+.headfour
+    font-family: 'Roboto Slab', serif
+    font-size: .7em
+    h3
+        font-weight: 800
+        font-size: .9em
+    h4
+        font-size: .85em
+
+.AddBook
     @include columnFlex
     justify-content: center
-    align-items: center
-    margin: 2rem
+    gap: .3rem
+    align-self: stretch
+    padding: .8rem
+    margin: .2rem 1rem
+    background: #fafafa
+    border-radius: 3px
+    input
+        font-size: .8em
+        padding: .2rem
+        border: 1px solid transparent
 
-.link
-    @include link
-    background: none !important
-    color: $fontColor
+    .bookInput
+        @include rowFlex
+        justify-content: space-evenly
+        align-items: stretch
+
+        gap: .5rem
+        .inputTitle
+            flex: .8
+
+.BookStatus
+    justify-content: space-between
+    gap: .4rem
+
+    div h3
+    font-size: .9em
+
+.addBtn
+    font-family: 'Roboto Slab', serif
+    flex: .3
+    background: #0290ff
+    margin: 0
+    color: #ffff
+.updatePro
+    color: #ffff
+.hSpan
+    height: 0.25rem
+    margin: .5rem 1rem
+    border: solid 1px #e8e8e8
+    border-bottom: none
+    color: #121212
 
 @media ( min-width: 768px  )
     body
-
         font-size: 18px
     .accountPic
-        max-width: 25px
-
+        img
+            width: 40px
     .navBar
-        padding: .2rem 1.5rem
+        padding: .7rem 1.5rem
+    .Book
+        padding: 1.5rem 5rem 1.5rem 1rem
+    .BooksComponent
+        margin: 2rem 5rem
+        ul
+            gap: 1.5rem
+    .hSpan
+        height: 0.25rem
+        margin: .5rem 4rem
+    .AddBook
+        margin: 2rem 4rem
     .headSpan
         height: 2.5rem
     footer
         width: 98%
+
 @media (min-width: 999px)
     body
         font-size: 25px
     .accountPic
-        max-width: 30px
-
+        img
+            width: 50px
     .headSpan
         height: 2.8rem
+    .book
+        margin: 1.5rem 10rem
 
 @media (min-width:1200px)
     body

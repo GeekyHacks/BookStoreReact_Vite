@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBook, getBooks } from '../redux/books/bookSlice';
-import BookProgress from './Books/BookProgress';
-import Buttons from './Books/Buttons';
+import { removeBook, getBooks } from '../../redux/books/bookSlice';
+import BookProgress from './BookProgress';
+import BookButtons from './BookButtons';
 
 const BooksContainer = () => {
   const { isLoading } = useSelector((state) => state.books);
@@ -12,7 +12,7 @@ const BooksContainer = () => {
 
   useEffect(() => {
     dispatch(getBooks());
-  }, [dispatch]);
+  }, []);
 
   const handleRemoveBook = (item_id) => {
     dispatch(removeBook(item_id));
@@ -34,10 +34,10 @@ const BooksContainer = () => {
             <li key={book.item_id} className="Book">
               <div className="fstDiv">
                 <div className="BookDetails">
-                  <span>{book.category}</span>
-                  <h2>{book.title}</h2>
-                  <span>{book.author}</span>
-                  <Buttons handleBook={handleRemoveBook} book={book} />
+                  <span className="cate">{book.category}</span>
+                  <h2 className="bookTitle">{book.title}</h2>
+                  <span className="author">{book.author}</span>
+                  <BookButtons handleBook={handleRemoveBook} book={book} />
                 </div>
               </div>
 

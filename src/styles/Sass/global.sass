@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@200;300;400;500;600;700;800&family=Roboto+Slab:wght@100&family=Roboto:wght@700&display=swap')
 
 $InterFont: "Inter", sans-serif
 $primarycolor: #CAF0F8
-$secondarycolor: #1ba8c5
-$fontColor: #03045E
-$box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1)
-$spanShadow:1px 2px 4px rgba(0, 0, 0, .8), 1px 2px 4px rgba(0, 0, 0, .8)
+$secondarycolor: #ffffff
+$fontColor: #121212
+$box-shadow: 5px 5px 2px rgba(233, 223, 223, 0.1), 2px 2px 2px rgba(0, 0, 0, 0.1)
+$spanShadow: 1px 2px 4px rgba(0, 0, 0, .6), 1px 2px 4px rgba(0, 0, 0, .6)
 $qrpadding: calc( 12% - 80px )
 $Qrpadding: calc( 25% - 120px )
 $qlpadding: calc( 12% - 80px )
@@ -22,23 +22,19 @@ $Qlpadding: calc( 25% - 120px )
 @mixin button
     transition: all 0.5s
     border-radius: 2px
-    // font-weight: 600
-    color: $fontColor !important
-    background-color: #0077B6 !important
+    color: #4386bf 
+    background: none
     cursor: pointer
     text-align: center
-    border: 1px solid rgba($fontColor, 0.4)
+    border: none
 
     &:active
         transform: scale(0.96)
-        background: $secondarycolor !important
+        background: $secondarycolor 
 
     &:focus
         outline: 0
-@mixin transparentLink
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
-    color: $fontColor !important
+
 
 @mixin link
     transition: all 0.5s
