@@ -2,8 +2,8 @@ import { Routes, Route } from 'react-router-dom';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './styles/Css/App.css';
-import BooksSection from './components/BooksSection';
-import CatContainer from './components/CatContainer';
+import BooksSection from './components/Books/BooksSection';
+import CatContainer from './components/Categories/CatContainer';
 import NavBar from './components/NavBar';
 function App() {
   return (

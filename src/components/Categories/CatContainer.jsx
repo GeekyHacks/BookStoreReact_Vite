@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { checkStatus } from '../redux/categories/catSlice';
+import { checkStatus } from '../../redux/categories/catSlice';
 
 const CatContainer = () => {
   const status = useSelector((state) => state.categories.categories);

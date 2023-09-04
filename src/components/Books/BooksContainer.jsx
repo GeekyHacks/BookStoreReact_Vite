@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBook, getBooks } from '../redux/books/bookSlice';
-import BookProgress from './Books/BookProgress';
-import BookButtons from './Books/BookButtons';
+import { removeBook, getBooks } from '../../redux/books/bookSlice';
+import BookProgress from './BookProgress';
+import BookButtons from './BookButtons';
 
 const BooksContainer = () => {
   const { isLoading } = useSelector((state) => state.books);
@@ -12,7 +12,7 @@ const BooksContainer = () => {
 
   useEffect(() => {
     dispatch(getBooks());
-  }, [dispatch]);
+  }, []);
 
   const handleRemoveBook = (item_id) => {
     dispatch(removeBook(item_id));

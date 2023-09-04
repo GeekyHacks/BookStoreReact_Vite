@@ -9,6 +9,10 @@ const initialState = {
   isLoading: false,
 };
 
+const handleReload = () => {
+  window.location.reload();
+};
+
 export const getBooks = createAsyncThunk('books/getBooks', async (thunkAPI) => {
   try {
     const resp = await axios.get(apiUrl);
@@ -22,6 +26,7 @@ export const getBooks = createAsyncThunk('books/getBooks', async (thunkAPI) => {
         category: bookData.category,
       };
     });
+
     return transformedBooks;
   } catch (error) {
     return thunkAPI.rejectWithValue(error);
@@ -40,6 +45,7 @@ export const postBooks = createAsyncThunk('books/postBooks', async (book, thunkA
 export const removeBook = createAsyncThunk('books/removeBook', async (id, thunkAPI) => {
   try {
     const resp = await axios.delete(`${apiUrl}${id}`);
+    handleReload();
     return resp.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error);
