@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 
-const Buttons = ({ handleBook, book }) => {
+const BookButtons = ({ handleBook, book }) => {
   return (
     <div className="editSect">
       <button href="https://github.com/GeekyHacks" type="a" className="comment">
         Comments
       </button>
       {/* <span className="hSpan"></span> */}
-      <button onClick={() => handleBook(book.item_id)} type="button" className='remove'>
+      <button onClick={() => handleBook(book.item_id)} type="button" className="remove">
         Remove
       </button>
       {/* <span className="hSpan"></span> */}
@@ -18,9 +18,9 @@ const Buttons = ({ handleBook, book }) => {
   );
 };
 
-Buttons.propTypes = {
+BookButtons.propTypes = {
   handleBook: PropTypes.func.isRequired,
   book: PropTypes.object.isRequired,
 };
 
-export default Buttons;
+export default BookButtons;

@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeBook, getBooks } from '../redux/books/bookSlice';
 import BookProgress from './Books/BookProgress';
-import Buttons from './Books/Buttons';
+import BookButtons from './Books/BookButtons';
 
 const BooksContainer = () => {
   const { isLoading } = useSelector((state) => state.books);
@@ -37,7 +37,7 @@ const BooksContainer = () => {
                   <span className="cate">{book.category}</span>
                   <h2 className="bookTitle">{book.title}</h2>
                   <span className="author">{book.author}</span>
-                  <Buttons handleBook={handleRemoveBook} book={book} />
+                  <BookButtons handleBook={handleRemoveBook} book={book} />
                 </div>
               </div>
 

@@ -1,34 +1,14 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './styles/Css/App.css';
-import accountPic from './assets/user.png';
 import BooksSection from './components/BooksSection';
 import CatContainer from './components/CatContainer';
-
+import NavBar from './components/NavBar';
 function App() {
   return (
     <div className="App">
-      <nav className="navBar">
-        <div className="fstdiv">
-          <Link className="bookstoreTitle" to="/BookStoreReact_Vite/">
-            Bookstore CMS
-          </Link>
-            <Link className="link" to="/BookStoreReact_Vite/books">
-              Books
-            </Link>
-            <Link className="link" to="/BookStoreReact_Vite/categories">
-              Categories
-            </Link>
-            <Link className="link" to="/BookStoreReact_Vite/contact">
-              Contact
-            </Link>
-        </div>
-
-        <Link className="accountPic" to="/BookStoreReact_Vite/">
-          <img src={accountPic} alt="" />
-        </Link>
-      </nav>
+      <NavBar />
       <Routes className="Routes">
         <Route path="/BookStoreReact_Vite/" element={<BooksSection />} />
         <Route path="/BookStoreReact_Vite/books" element={<BooksSection />} />
